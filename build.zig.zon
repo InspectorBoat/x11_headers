@@ -1,7 +1,7 @@
 .{
     .name = .x11_headers,
     .version = "1.0.0",
-    .fingerprint = 0x73d0ebf76c33e052, // Changing this has security and trust implications.
+    .fingerprint = 0x77744e5cd863ff85, // Changing this has security and trust implications.
     .paths = .{
         "build.zig",
         "build.zig.zon",
