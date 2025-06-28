@@ -5,7 +5,7 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     const lib = b.addLibrary(.{
-        .name = "x11-headers",
+        .name = "x11_headers",
         .root_module = b.createModule(.{ .target = target, .optimize = optimize }),
         .linkage = .static,
     });
