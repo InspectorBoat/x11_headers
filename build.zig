@@ -6,10 +6,14 @@ pub fn build(b: *std.Build) void {
 
     const lib = b.addLibrary(.{
         .name = "x11_headers",
-        .root_module = b.createModule(.{ .target = target, .optimize = optimize }),
         .linkage = .static,
+        .root_module = b.createModule(.{
+            .target = target,
+            .optimize = optimize,
+            .link_libc = true,
+        }),
     });
-    lib.addCSourceFile(.{
+    lib.root_module.addCSourceFile(.{
         .file = b.addWriteFiles().add("empty.c", ""),
     });
 
